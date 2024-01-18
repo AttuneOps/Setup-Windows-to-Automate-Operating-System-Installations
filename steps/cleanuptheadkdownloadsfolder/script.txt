@@ -1,0 +1,7 @@
+Set-Location "C:\software\"
+
+$ADKDownloads = "ADKDownloads"
+
+if (Test-Path "${ADKDownloads}") {
+    Remove-Item -Recurse ".\${ADKDownloads}" -Verbose
+}

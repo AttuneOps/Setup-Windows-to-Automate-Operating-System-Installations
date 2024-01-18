@@ -1,0 +1,29 @@
+$ADK="C:\software\ADKDownloads"
+$adkInstalled = $false
+
+Set-Location "${ADK}"
+    
+$winPEPath = "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment"
+
+if (Test-Path $winPEPath) {
+    Write-Host "WinPE add-on for ADK is installed."
+    exit 0
+} else {
+    Write-Host "Installing ADK WinPE add-on..."
+    ./adk_winpe_add_on.exe /quiet `
+        /features OptionId.WindowsPreinstallationEnvironment `
+        /norestart `
+        /log adk_winpe_add_on_install_log.txt `
+        /ceip off
+}
+
+# Loop until ADK is installed
+while (-not $adkInstalled) {
+    if (Test-Path -Path $winPEPath) {
+        Write-Host "Windows ADK WinPE add-on is installed."
+        $adkInstalled = $true
+        exit 0
+    } else {
+        Start-Sleep -Seconds 5
+    }
+}

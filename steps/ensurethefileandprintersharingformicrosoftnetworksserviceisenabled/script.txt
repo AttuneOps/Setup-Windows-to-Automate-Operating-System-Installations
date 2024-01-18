@@ -1,0 +1,6 @@
+Get-NetAdapter | ForEach-Object { 
+    if (-not ($_ | Get-NetAdapterBinding -ComponentID ms_server).Enabled) {
+        $_ | Enable-NetAdapterBinding -ComponentID ms_server
+    }
+    Get-NetAdapterBinding -ComponentID ms_server
+}

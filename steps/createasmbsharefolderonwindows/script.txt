@@ -1,0 +1,33 @@
+# Define the folder path and share name
+$shareName = "share"
+$folderPath = "{automationWorkerWindowsBaseDirectory}\$shareName"
+
+# Check if the folder exists
+if (-not (Test-Path $folderPath)) {
+    Write-Host "Folder does not exist: $folderPath"
+    New-Item -Path $folderPath -ItemType Directory
+}
+
+# Check if the share already exists
+$shareExists = Get-SmbShare -Name $shareName -ErrorAction SilentlyContinue
+if ($shareExists) {
+    Write-Host "Share already exists: $shareName"
+} else {
+    # Create a new file share
+    New-SmbShare -Name $shareName -Path $folderPath -FullAccess Everyone
+    Write-Host "Share created: $shareName"
+}
+
+# Display current shares
+Get-SmbShare
+
+# Modifying NTFS permissions of the folder to allow full access to everyone
+Write-Host "Modifying NTFS permissions for '$folderPath' to grant full access to Everyone..."
+$Acl = Get-Acl $folderPath
+$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("Everyone", "FullControl", "ContainerInherit,ObjectInherit", "None", "Allow")
+$Acl.SetAccessRule($AccessRule)
+Set-Acl -Path $folderPath -AclObject $Acl
+Write-Host "NTFS permissions modified successfully."
+
+# Reminder for manual action
+Write-Error "Please ensure that 'Password Protected Sharing' is turned off in 'Network and Sharing Center' -> 'Change advanced sharing settings'. This step requires manual action."

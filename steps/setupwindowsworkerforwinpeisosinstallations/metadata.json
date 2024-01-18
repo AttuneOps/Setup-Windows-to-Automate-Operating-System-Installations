@@ -1,0 +1,24 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "f8117dce-8f55-4c4b-a3a6-dc12418dc3ca", 
+    "isBlueprint": true, 
+    "key": "setupwindowsworkerforwinpeisosinstallations", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "installwindowsassessmentanddeploymentkit"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "installworkerprerequisitesonwindows"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "setupandcreatesmbsharefolderonwindows"
+        }
+    ], 
+    "name": "Setup Windows Worker for WinPE ISOs Installations", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

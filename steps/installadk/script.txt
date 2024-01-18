@@ -1,0 +1,29 @@
+$ADK="C:\software\ADKDownloads"
+$adkInstalled = $false
+
+Set-Location "${ADK}"
+
+$adkPath = "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit"
+
+if (Test-Path $adkPath) {
+    Write-Host "Windows ADK is installed."
+    exit 0
+} else {
+    Write-Host "Installing ADK..."
+    ./adksetup.exe /quiet `
+        /features OptionId.DeploymentTools  `
+        /norestart `
+        /log adk_install_log.txt `
+        /ceip off
+}
+
+# Loop until ADK is installed
+while (-not $adkInstalled) {
+    if (Test-Path -Path $adkPath) {
+        Write-Host "Windows ADK is installed."
+        $adkInstalled = $true
+        exit 0
+    } else {
+        Start-Sleep -Seconds 5
+    }
+}
