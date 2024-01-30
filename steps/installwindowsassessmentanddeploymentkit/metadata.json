@@ -7,15 +7,23 @@
     "key": "installwindowsassessmentanddeploymentkit", 
     "links": [
         {
-            "order": 0, 
-            "stepKey": "downloadandinstalladk"
-        }, 
-        {
-            "order": 200, 
-            "stepKey": "downloadandinstallwinpeaddonforadk"
-        }, 
-        {
             "order": 250, 
+            "stepKey": "downloadadk"
+        }, 
+        {
+            "order": 300, 
+            "stepKey": "installadk"
+        }, 
+        {
+            "order": 350, 
+            "stepKey": "downloadwinpeaddonforadk"
+        }, 
+        {
+            "order": 400, 
+            "stepKey": "installwinpeaddonforadk"
+        }, 
+        {
+            "order": 450, 
             "stepKey": "cleanuptheadkdownloadsfolder"
         }
     ], 

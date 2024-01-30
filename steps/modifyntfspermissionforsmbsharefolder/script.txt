@@ -1,0 +1,10 @@
+# Define the folder path and share name
+$shareName = "share"
+$folderPath = "{automationWorkerWindowsBaseDirectory}\$shareName"
+
+Write-Host "Modifying NTFS permissions for '$folderPath' to grant full access to Everyone..."
+$Acl = Get-Acl $folderPath
+$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("Everyone", "FullControl", "ContainerInherit,ObjectInherit", "None", "Allow")
+$Acl.SetAccessRule($AccessRule)
+Set-Acl -Path $folderPath -AclObject $Acl
+Write-Host "NTFS permissions modified successfully."

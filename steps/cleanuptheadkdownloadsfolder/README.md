@@ -1,1 +1,1 @@
-Deletes the folder at `C:\attuneautomationworker\ADKDownloads`.
+Delete the `ADKDownloads` directory.

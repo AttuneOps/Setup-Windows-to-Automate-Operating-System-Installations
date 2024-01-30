@@ -20,6 +20,10 @@
         }, 
         {
             "order": 150, 
+            "stepKey": "modifyntfspermissionforsmbsharefolder"
+        }, 
+        {
+            "order": 200, 
             "stepKey": "turnoffpasswordprotectedsharing"
         }
     ], 
