@@ -3,7 +3,7 @@
     "concurrency": 1, 
     "enabled": true, 
     "externalUuid4": "95c62fea-4295-4ae0-ab06-99f8896a7782", 
-    "isBlueprint": false, 
+    "isBlueprint": true, 
     "key": "installwindowsassessmentanddeploymentkit", 
     "links": [
         {

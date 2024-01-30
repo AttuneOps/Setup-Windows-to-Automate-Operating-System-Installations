@@ -3,7 +3,7 @@
     "concurrency": 1, 
     "enabled": true, 
     "externalUuid4": "ce72f0fb-5a37-49db-a89f-7ab855a9a68f", 
-    "isBlueprint": false, 
+    "isBlueprint": true, 
     "key": "setupandcreatesmbsharefolder", 
     "links": [
         {
