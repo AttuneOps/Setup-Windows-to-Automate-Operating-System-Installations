@@ -28,6 +28,3 @@ $AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("Eve
 $Acl.SetAccessRule($AccessRule)
 Set-Acl -Path $folderPath -AclObject $Acl
 Write-Host "NTFS permissions modified successfully."
-
-# Reminder for manual action
-Write-Error "Please ensure that 'Password Protected Sharing' is turned off in 'Network and Sharing Center' -> 'Change advanced sharing settings'. This step requires manual action."

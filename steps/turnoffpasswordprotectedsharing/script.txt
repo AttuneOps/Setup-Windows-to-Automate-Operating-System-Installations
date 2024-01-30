@@ -1,0 +1,5 @@
+# Reminder for manual action
+Write-Host "Manual action required!"
+Write-Host "Please turn off 'Password Protected Sharing' in 'Network and Sharing Center' -> 'Change advanced sharing settings'."
+
+exit 1

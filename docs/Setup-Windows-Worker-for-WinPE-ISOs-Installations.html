@@ -355,6 +355,14 @@ the virtual machine to have nested virtualisation enabled.</p>
                         </a>
                     </p>
 
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#turnoffpasswordprotectedsharing">
+                            <strong>Step 3.4 -</strong> Turn off Password Protected Sharing
+                        </a>
+                    </p>
+
 
 
                 </div>
@@ -984,6 +992,13 @@ if (Test-Path &quot;${ADKDownloads}&quot;) {
                         </h3>
                     </div>
 
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
 
 
@@ -1476,9 +1491,57 @@ $AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule(&quo
 $Acl.SetAccessRule($AccessRule)
 Set-Acl -Path $folderPath -AclObject $Acl
 Write-Host &quot;NTFS permissions modified successfully.&quot;
+                </code>
+            </pre>
+        </div>
+    </div>
 
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="turnoffpasswordprotectedsharing">
+                            <a href="#turnoffpasswordprotectedsharing">
+                                <strong>Step 3.4 -</strong> Turn off Password Protected Sharing
+                            </a>
+                        </h4>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
 # Reminder for manual action
-Write-Error &quot;Please ensure that &#x27;Password Protected Sharing&#x27; is turned off in &#x27;Network and Sharing Center&#x27; -&gt; &#x27;Change advanced sharing settings&#x27;. This step requires manual action.&quot;
+Write-Host &quot;Manual action required!&quot;
+Write-Host &quot;Please turn off &#x27;Password Protected Sharing&#x27; in &#x27;Network and Sharing Center&#x27; -&gt; &#x27;Change advanced sharing settings&#x27;.&quot;
+
+exit 1
                 </code>
             </pre>
         </div>

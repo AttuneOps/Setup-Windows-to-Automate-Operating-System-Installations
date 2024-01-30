@@ -17,6 +17,10 @@
         {
             "order": 100, 
             "stepKey": "createasmbsharefolderonwindows"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "turnoffpasswordprotectedsharing"
         }
     ], 
     "name": "Setup and create SmbShare folder on Windows", 
