@@ -1,16 +1,16 @@
 {
-    "actionOnStepFail": null, 
+    "actionOnStepFail": "stop", 
     "enabled": true, 
-    "externalUuid4": "1d8c1236-ffab-4967-9f39-9b3032ac5b9b", 
+    "externalUuid4": "eb067bfd-1ea1-4201-9240-44b011f64f1a", 
     "interpreter": 2, 
     "interpreterCommand": "", 
     "interpreterScriptExt": null, 
     "interpreterScriptSyntax": "", 
-    "key": "enablefirewallrulenetworkdiscoveryonwindows", 
-    "name": "Enable Firewall Rule Network Discovery on Windows", 
+    "key": "cleanup7zinstaller", 
+    "name": "Cleanup 7z Installer", 
     "osCredKey": "automationworkerwindowsuseradministrator", 
     "serverKey": "automationworkerwindowsnode", 
     "successExitCode": 0, 
-    "timeout": 120, 
+    "timeout": 300, 
     "type": "com.servertribe.attune.tuples.StepWinRmTuple"
 }

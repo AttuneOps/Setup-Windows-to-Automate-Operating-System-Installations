@@ -1,16 +1,16 @@
 {
-    "actionOnStepFail": "stop", 
+    "actionOnStepFail": null, 
     "enabled": true, 
-    "externalUuid4": "eb067bfd-1ea1-4201-9240-44b011f64f1a", 
+    "externalUuid4": "83dc8155-32e0-42da-a64c-733ead196f2b", 
     "interpreter": 2, 
     "interpreterCommand": "", 
     "interpreterScriptExt": null, 
     "interpreterScriptSyntax": "", 
-    "key": "cleanup7zinstallationonwindows", 
-    "name": "Cleanup 7z Installation on Windows", 
+    "key": "createasmbsharefolder", 
+    "name": "Create a SMB Share folder", 
     "osCredKey": "automationworkerwindowsuseradministrator", 
     "serverKey": "automationworkerwindowsnode", 
     "successExitCode": 0, 
-    "timeout": 300, 
+    "timeout": 180, 
     "type": "com.servertribe.attune.tuples.StepWinRmTuple"
 }

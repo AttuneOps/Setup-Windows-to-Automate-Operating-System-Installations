@@ -4,7 +4,7 @@
     "enabled": true, 
     "externalUuid4": "ce72f0fb-5a37-49db-a89f-7ab855a9a68f", 
     "isBlueprint": false, 
-    "key": "setupandcreatesmbsharefolderonwindows", 
+    "key": "setupandcreatesmbsharefolder", 
     "links": [
         {
             "order": 0, 
@@ -12,11 +12,11 @@
         }, 
         {
             "order": 50, 
-            "stepKey": "enablefirewallrulenetworkdiscoveryonwindows"
+            "stepKey": "enablefirewallrulenetworkdiscovery"
         }, 
         {
             "order": 100, 
-            "stepKey": "createasmbsharefolderonwindows"
+            "stepKey": "createasmbsharefolder"
         }, 
         {
             "order": 150, 
@@ -27,6 +27,6 @@
             "stepKey": "turnoffpasswordprotectedsharing"
         }
     ], 
-    "name": "Setup and create SmbShare folder on Windows", 
+    "name": "Setup and create SMB Share folder", 
     "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }

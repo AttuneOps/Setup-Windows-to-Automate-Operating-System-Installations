@@ -12,11 +12,11 @@
         }, 
         {
             "order": 100, 
-            "stepKey": "installworkerprerequisitesonwindows"
+            "stepKey": "installwindowsworkerprerequisites"
         }, 
         {
             "order": 150, 
-            "stepKey": "setupandcreatesmbsharefolderonwindows"
+            "stepKey": "setupandcreatesmbsharefolder"
         }
     ], 
     "name": "Setup Windows Worker for WinPE ISOs Installations", 

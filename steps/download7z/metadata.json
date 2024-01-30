@@ -1,16 +1,16 @@
 {
-    "actionOnStepFail": null, 
+    "actionOnStepFail": "stop", 
     "enabled": true, 
-    "externalUuid4": "83dc8155-32e0-42da-a64c-733ead196f2b", 
+    "externalUuid4": "05affa8e-30b5-47ca-af47-9b2c0884d97a", 
     "interpreter": 2, 
     "interpreterCommand": "", 
     "interpreterScriptExt": null, 
     "interpreterScriptSyntax": "", 
-    "key": "createasmbsharefolderonwindows", 
-    "name": "Create a SmbShare folder on Windows", 
+    "key": "download7z", 
+    "name": "Download 7z", 
     "osCredKey": "automationworkerwindowsuseradministrator", 
     "serverKey": "automationworkerwindowsnode", 
     "successExitCode": 0, 
-    "timeout": 180, 
+    "timeout": 300, 
     "type": "com.servertribe.attune.tuples.StepWinRmTuple"
 }

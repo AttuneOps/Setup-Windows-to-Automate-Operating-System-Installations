@@ -4,21 +4,21 @@
     "enabled": true, 
     "externalUuid4": "9733dab8-4df9-4a47-a155-96e579cd60a5", 
     "isBlueprint": false, 
-    "key": "downloadandinstall7zonwindows", 
+    "key": "downloadandinstall7z", 
     "links": [
         {
             "order": 0, 
-            "stepKey": "download7zonwindows"
+            "stepKey": "download7z"
         }, 
         {
             "order": 100, 
-            "stepKey": "install7zonwindows"
+            "stepKey": "install7z"
         }, 
         {
             "order": 200, 
-            "stepKey": "cleanup7zinstallationonwindows"
+            "stepKey": "cleanup7zinstaller"
         }
     ], 
-    "name": "Download and Install 7z on Windows", 
+    "name": "Download and Install 7z", 
     "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }
