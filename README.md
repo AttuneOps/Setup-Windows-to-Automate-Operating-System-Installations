@@ -101,13 +101,17 @@ components, and the applications running on it.
 
 ### Create a SMB Share folder
 
-Create a shared space for storing and accessing files and related data across 
-required for the operating system installation process.
+Create a shared space for storing and accessing files.
 
-Enable the File and Printer Sharing service, 
-configure the firewall for Network Discovery, 
-create an SMB share folder, and 
-setup appropriate NTFS permissions.
+SMB (Server Message Block) is widely supported and provides a flexible way 
+to connect different devices and operating systems for file sharing.
+
+This process includes:
+* Enable the File and Printer Sharing service, 
+* configure the firewall for Network Discovery, 
+* create an SMB share folder, 
+* setup appropriate NTFS permissions, and 
+* Turn off password protected sharing (optional).
 
 
 
