@@ -1,16 +1,32 @@
 {
-    "actionOnStepFail": null, 
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
     "enabled": true, 
-    "externalUuid4": "83dc8155-32e0-42da-a64c-733ead196f2b", 
-    "interpreter": 2, 
-    "interpreterCommand": "", 
-    "interpreterScriptExt": null, 
-    "interpreterScriptSyntax": "", 
+    "externalUuid4": "ce72f0fb-5a37-49db-a89f-7ab855a9a68f", 
+    "isBlueprint": true, 
     "key": "createasmbsharefolder", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "ensurethefileandprintersharingformicrosoftnetworksserviceisenabled"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "enablefirewallrulenetworkdiscovery"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "createanewsmbsharefolder"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "modifyntfspermissionforsmbsharefolder"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "turnoffpasswordprotectedsharing"
+        }
+    ], 
     "name": "Create a SMB Share folder", 
-    "osCredKey": "automationworkerwindowsuseradministrator", 
-    "serverKey": "automationworkerwindowsnode", 
-    "successExitCode": 0, 
-    "timeout": 180, 
-    "type": "com.servertribe.attune.tuples.StepWinRmTuple"
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }

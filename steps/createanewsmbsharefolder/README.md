@@ -1,0 +1,1 @@
+Create the SMB file share with full access for everyone.
