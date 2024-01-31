@@ -485,7 +485,15 @@ smooth network communication for tasks like SmbShare operations.</p>
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-Enable-NetFirewallRule -DisplayGroup &quot;Network Discovery&quot;
+$firewallRuleEnabled = Get-NetFirewallRule -DisplayGroup &quot;Network Discovery&quot; | 
+    Where-Object { $_.Enabled -eq &#x27;True&#x27; }
+
+if (-not $firewallRuleEnabled) {
+    Enable-NetFirewallRule -DisplayGroup &quot;Network Discovery&quot;
+    Write-Host &quot;Network Discovery rules have been enabled.&quot;
+} else {
+    Write-Host &quot;Network Discovery rules are already enabled.&quot;
+}
                 </code>
             </pre>
         </div>
@@ -616,7 +624,6 @@ to everyone. </p>
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-# Define the folder path and share name
 $shareName = &quot;share&quot;
 $folderPath = &quot;{automationWorkerWindowsBaseDirectory}\$shareName&quot;
 
@@ -684,7 +691,6 @@ please update this step and submit a
 # Reminder for manual action
 Write-Host &quot;Manual action required!&quot;
 Write-Host &quot;Please turn off &#x27;Password Protected Sharing&#x27; in &#x27;Network and Sharing Center&#x27; -&gt; &#x27;Change advanced sharing settings&#x27;.&quot;
-
 exit 1
                 </code>
             </pre>

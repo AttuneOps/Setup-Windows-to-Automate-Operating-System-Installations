@@ -1,1 +1,9 @@
-Enable-NetFirewallRule -DisplayGroup "Network Discovery"
+$firewallRuleEnabled = Get-NetFirewallRule -DisplayGroup "Network Discovery" | 
+    Where-Object { $_.Enabled -eq 'True' }
+
+if (-not $firewallRuleEnabled) {
+    Enable-NetFirewallRule -DisplayGroup "Network Discovery"
+    Write-Host "Network Discovery rules have been enabled."
+} else {
+    Write-Host "Network Discovery rules are already enabled."
+}
